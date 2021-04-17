@@ -11,8 +11,8 @@ TEST_CASE("x-coordinate based on address", "[gridcitymap]")
     const int a27 = addresses[27];
     REQUIRE( city.get_x(a0)  == 0 );
     REQUIRE( city.get_y(a0)  == 0 );
-    REQUIRE( city.get_x(a27) == 6 );
-    REQUIRE( city.get_y(a27) == 8 );
+    REQUIRE( city.get_x(a27) == 3 );
+    REQUIRE( city.get_y(a27) == 4 );
 }
 
 TEST_CASE("distance calculated", "[gridcitymap]")

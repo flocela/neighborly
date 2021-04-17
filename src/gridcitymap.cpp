@@ -32,12 +32,12 @@ std::vector<int> GridCityMap::getAddresses () const
 int GridCityMap::get_x (const int& address) const
 {
 	std::cout << "get_x: " << address << ": "<< address%_width << std::endl; 
-	return (address%_width) * 2;
+	return (address%_width);
 }
 
 int GridCityMap::get_y (const int& address) const
 {
-	return (address/_width) * 2;
+	return (address/_width);
 }
 
 double GridCityMap::dist (const int& from_address, const int& to_address) const
