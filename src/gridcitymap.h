@@ -13,8 +13,8 @@ class GridCityMap: public CityMap
     	GridCityMap (int width);
         std::unique_ptr<std::vector<const int*>> getAddresses () const override;
         double dist (const int& from_address, const int& to_address) const override;
-        int get_x (const int& address);
-        int get_y (const int& address);
+        int get_x (const int& address) const;
+        int get_y (const int& address) const;
         GridCityMap (GridCityMap&& obj) = default;
         ~GridCityMap() = default;
         

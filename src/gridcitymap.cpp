@@ -1,5 +1,7 @@
 #include "gridcitymap.h"
-#include <cmath>
+
+#include <math.h>
+#include <iostream>
 
 // _width is the width of the grid.
 // The x axis goes from left to right.
@@ -17,7 +19,7 @@ GridCityMap::GridCityMap (int width): _width{width}, _addresses(width*width)
   	{
   		for (int jj=0; jj<width; ++jj)
         {
-          _addresses[ (ii*width) + jj] = std::move(std::make_unique<int>( (ii*2) + (jj*2) ));
+          _addresses[ (ii*width) + jj] = std::move(std::make_unique<int>( (ii * width) + (jj) ));
         }
   	}
 }
@@ -32,18 +34,19 @@ std::unique_ptr<std::vector<const int*>> GridCityMap::getAddresses () const
 	return returnVector;
 }
 
-int GridCityMap::get_x (const int& address)
+int GridCityMap::get_x (const int& address) const
 {
-	return address%_width;
+	std::cout << "get_x: " << address << ": "<< address%_width << std::endl; 
+	return (address%_width) * 2;
 }
 
-int GridCityMap::get_y (const int& address)
+int GridCityMap::get_y (const int& address) const
 {
-	return address/_width;
+	return (address/_width) * 2;
 }
 
 double GridCityMap::dist (const int& from_address, const int& to_address) const
 {
-	
-  	return ( 0.1 );
+  	return ( fabs(get_x(from_address) - get_x(to_address)) + 
+	  	     fabs(get_y(from_address) - get_y(to_address)) );
 }
