@@ -6,9 +6,9 @@
 TEST_CASE("x-coordinate based on address", "[gridcitymap]")
 {
     GridCityMap city = GridCityMap(6);
-    std::vector<const int*> addresses = *(city.getAddresses().get());
-    const int a0  = *(addresses[0]);
-    const int a27 = *(addresses[27]);
+    std::vector<int> addresses = city.getAddresses();
+    const int a0  = addresses[0];
+    const int a27 = addresses[27];
     REQUIRE( city.get_x(a0)  == 0 );
     REQUIRE( city.get_y(a0)  == 0 );
     REQUIRE( city.get_x(a27) == 6 );
@@ -18,9 +18,9 @@ TEST_CASE("x-coordinate based on address", "[gridcitymap]")
 TEST_CASE("distance calculated", "[gridcitymap]")
 {
     GridCityMap city = GridCityMap(6);
-    std::vector<const int*> addresses = *(city.getAddresses().get());
-    const int a1  = *(addresses[1]);
-    const int a28 = *(addresses[28]);
+    std::vector<int> addresses = city.getAddresses();
+    const int a1  = addresses[1];
+    const int a28 = addresses[28];
     int a1_x  = city.get_x(a1);
     int a1_y  = city.get_y(a1);
     int a28_x = city.get_x(a28);

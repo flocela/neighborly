@@ -6,17 +6,22 @@
 class GridCityMap: public CityMap
 {
     private:
-    	std::vector<std::unique_ptr<int>> _addresses;
+    	std::vector<int> _addresses;
         int _width;
     
     public:
     	GridCityMap (int width);
-        std::unique_ptr<std::vector<const int*>> getAddresses () const override;
+        GridCityMap () = delete;
+        GridCityMap (const GridCityMap& o) = default;
+        GridCityMap (GridCityMap&& o) noexcept = default;
+        GridCityMap& operator= (const GridCityMap& o) = default;
+        ~GridCityMap() = default;
+
+        std::vector<int> getAddresses () const override;
         double dist (const int& from_address, const int& to_address) const override;
         int get_x (const int& address) const;
         int get_y (const int& address) const;
-        GridCityMap (GridCityMap&& obj) = default;
-        ~GridCityMap() = default;
+        
         
 };
 

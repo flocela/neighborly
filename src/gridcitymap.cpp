@@ -19,19 +19,14 @@ GridCityMap::GridCityMap (int width): _width{width}, _addresses(width*width)
   	{
   		for (int jj=0; jj<width; ++jj)
         {
-          _addresses[ (ii*width) + jj] = std::move(std::make_unique<int>( (ii * width) + (jj) ));
+          _addresses[ (ii*width) + jj] = ii * width + jj;
         }
   	}
 }
 
-std::unique_ptr<std::vector<const int*>> GridCityMap::getAddresses () const
+std::vector<int> GridCityMap::getAddresses () const
 {
-	std::unique_ptr<std::vector<const int*>> returnVector = std::make_unique<std::vector<const int*>>();
-	for (auto& int_ptr: _addresses)
-	{
-		returnVector->push_back((int_ptr.get()));
-	}
-	return returnVector;
+	return _addresses;
 }
 
 int GridCityMap::get_x (const int& address) const
