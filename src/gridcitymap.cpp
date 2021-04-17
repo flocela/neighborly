@@ -11,23 +11,23 @@
 // 6  7  8
 // Address 3 is 4 units away from address 5 in the x direction.
 // Address 1 is 4 units away from address 7 in the y direction.
-GridCityMap::GridCityMap (int const width): _width{width}
+GridCityMap::GridCityMap (int width): _width{width}, _addresses(width*width)
 {
-  	for (int ii=0; ii<=width; ++ii)
+  	for (int ii=0; ii<width; ++ii)
   	{
   		for (int jj=0; jj<width; ++jj)
         {
-          _addresses[ (ii*width) + jj] = std::make_unique<int>(ii*2, jj*2);
+          _addresses[ (ii*width) + jj] = std::move(std::make_unique<int>( (ii*2) + (jj*2) ));
         }
   	}
 }
 
-std::vector<int> GridCityMap::getAddresses () const
+std::unique_ptr<std::vector<const int*>> GridCityMap::getAddresses () const
 {
-	std::vector<int> returnVector ={};
+	std::unique_ptr<std::vector<const int*>> returnVector = std::make_unique<std::vector<const int*>>();
 	for (auto& int_ptr: _addresses)
 	{
-		returnVector.push_back(*(int_ptr.get()));
+		returnVector->push_back((int_ptr.get()));
 	}
 	return returnVector;
 }

@@ -2,7 +2,6 @@
 #define GRIDCITYMAP_H
 
 #include "citymap.h"
-#include <memory>
 
 class GridCityMap: public CityMap
 {
@@ -11,11 +10,14 @@ class GridCityMap: public CityMap
         int _width;
     
     public:
-    	GridCityMap (const int width);
-        std::vector<int> getAddresses () const override;
+    	GridCityMap (int width);
+        std::unique_ptr<std::vector<const int*>> getAddresses () const override;
         double dist (const int& from_address, const int& to_address) const override;
         int get_x (const int& address);
         int get_y (const int& address);
+        GridCityMap (GridCityMap&& obj) = default;
+        ~GridCityMap() = default;
+        
 };
 
 #endif

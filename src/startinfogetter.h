@@ -2,11 +2,11 @@
 #define STARTINFOGETTER_H
 
 #include <memory>
-#include "startinfo"
+#include "startinfo.h"
 
 class StartInfoGetter {
     public:
-        unique_ptr<StartInfo> getInfo ();
+        std::unique_ptr<StartInfo> getInfo ();
 };
 
 #endif

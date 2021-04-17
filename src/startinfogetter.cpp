@@ -1,8 +1,8 @@
-#include "startinfo.h"
+#include "startinfogetter.h"
 
-unique_ptr<StartInfo> StartInfoGetter::getInfo ()
+std::unique_ptr<StartInfo> StartInfoGetter::getInfo ()
 {
   	int city_width = 6;
-    unique_ptr<StartInfo> info = make_unique<StartInfo>();
-    unique_ptr<CityMap>   city = make_unique<GridCityMap>(city_width);
+    std::unique_ptr<StartInfo> info = std::make_unique<StartInfo>();
+    std::unique_ptr<CityMap>   city = std::make_unique<GridCityMap>(city_width);
 }

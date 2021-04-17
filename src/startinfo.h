@@ -8,8 +8,7 @@
 class StartInfo
 {
     public:
-        GridCityMap city;
-        CityMap city2;
+        CityMap* city2;
         //std::vector<Resident> residents;
         int happinessGoal;
         int maxNumOfRuns;
