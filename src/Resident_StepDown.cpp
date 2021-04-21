@@ -1,4 +1,4 @@
-#include "resident_stepdown.h"
+#include "Resident_StepDown.h"
 
 ResidentStepDown::ResidentStepDown (int id,
                                     Color color, 

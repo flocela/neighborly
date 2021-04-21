@@ -1,16 +1,16 @@
 #ifndef STARTINFOMAKER_H
 #define STARTINFOMAKER_H
 
-#include "startinfo.h"
-#include "happinessfunc.h"
-#include "citymap.h"
+#include "StartInfo.h"
+#include "HappinessFunc.h"
+#include "City.h"
 #include <vector>
-#include "resident.h"
+#include "Resident.h"
 
 class StartInfoMaker {
     public:
         StartInfoMaker () = default;
-        StartInfo getInfo (CityMap::CityType cityType,
+        StartInfo getInfo (City::CityType cityType,
                            std::vector<double> cityValues,
                            std::vector<int> numOfHousesPerGroup,
                            std::vector<Resident::ResidentType> residentTypesPerResGroup,

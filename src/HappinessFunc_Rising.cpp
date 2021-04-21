@@ -1,4 +1,4 @@
-#include "happinessfunc_rising.h"
+#include "HappinessFunc_Rising.h"
 
 HappinessFuncRising::HappinessFuncRising (double happinessAtZeroDiversity,
                                           double happinessAtOneDiversity): 

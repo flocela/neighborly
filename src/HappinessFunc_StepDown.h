@@ -1,7 +1,7 @@
 #ifndef HAPPINESSFUNC_STEPDOWN_H
 #define HAPPINESSFUNC_STEPDOWN_H
 
-#include "happinessfunc.h"
+#include "HappinessFunc.h"
 
 class HappinessFuncStepDown: public HappinessFunc
 {

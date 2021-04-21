@@ -1,8 +1,8 @@
 #ifndef RESIDENTFLAT_H
 #define RESIDENTFLAT_H
 
-#include <resident.h>
-#include "happinessfunc_flat.h"
+#include <Resident.h>
+#include "HappinessFunc_Flat.h"
 
 class ResidentFlat: public Resident
 {

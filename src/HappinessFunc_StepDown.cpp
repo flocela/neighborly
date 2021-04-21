@@ -1,4 +1,4 @@
-#include "happinessfunc_stepdown.h"
+#include "HappinessFunc_StepDown.h"
 
 HappinessFuncStepDown::HappinessFuncStepDown (double happinessAtZeroDiversity, 
                                               double happinessAtOneDiversity, 

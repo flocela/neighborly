@@ -1,9 +1,9 @@
-#include "startinfomaker.h"
-#include "resident_flat.h"
-#include "resident_stepdown.h"
-#include "startinfo.h"
+#include "StartInfoMaker.h"
+#include "Resident_Flat.h"
+#include "Resident_StepDown.h"
+#include "StartInfo.h"
 
-StartInfo StartInfoMaker::getInfo (CityMap::CityType cityType,
+StartInfo StartInfoMaker::getInfo (City::CityType cityType,
                                    std::vector<double> cityValues,
                                    std::vector<int> numOfResPerGroup,
                                    std::vector<Resident::ResidentType> residentTypesPerResGroup,

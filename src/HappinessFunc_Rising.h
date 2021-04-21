@@ -1,7 +1,7 @@
 #ifndef HAPPINESSFUNC_RISING_H
 #define HAPPINESSFUNC_RISING_H
 
-#include "happinessfunc.h"
+#include "HappinessFunc.h"
 
 class HappinessFuncRising: public HappinessFunc
 {

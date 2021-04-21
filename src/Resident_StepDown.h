@@ -1,8 +1,8 @@
 #ifndef RESIDENTSTEPDOWN_H
 #define RESIDENTSTEPDOWN_H
 
-#include <resident.h>
-#include "happinessfunc_stepdown.h"
+#include <Resident.h>
+#include "HappinessFunc_StepDown.h"
 
 class ResidentStepDown: public Resident
 {

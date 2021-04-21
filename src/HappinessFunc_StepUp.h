@@ -1,7 +1,7 @@
 #ifndef HAPPINESSFUNC_STEPUP_H
 #define HAPPINESSFUNC_STEPUP_H
 
-#include "happinessfunc.h"
+#include "HappinessFunc.h"
 
 class HappinessFuncStepUp: public HappinessFunc
 {
@@ -29,7 +29,7 @@ class HappinessFuncStepUp: public HappinessFunc
                              int num_of_diff_neighbors) const override;
 
     private:
-        double _happiness_at_one_diversity;
+        double _happiness_at_zero_diversity;
         double _happiness_at_one_diversity;
         double _diversity_where_rise_happens;
 };

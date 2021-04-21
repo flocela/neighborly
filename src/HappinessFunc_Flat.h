@@ -1,7 +1,7 @@
 #ifndef HAPPINESSFUNC_FLAT_H
 #define HAPPINESSFUNC_FLAT_H
 
-#include "happinessfunc.h"
+#include "HappinessFunc.h"
 
 // Always returns the same happiness value, no matter the neighbors.
 class HappinessFuncFlat: public HappinessFunc

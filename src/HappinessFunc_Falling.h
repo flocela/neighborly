@@ -1,7 +1,7 @@
 #ifndef HAPPINESSFUNC_FALLING_H
 #define HAPPINESSFUNC_FALLING_H
 
-#include "happinessfunc.h"
+#include "HappinessFunc.h"
 
 class HappinessFuncFalling: public HappinessFunc
 {

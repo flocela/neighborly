@@ -1,4 +1,4 @@
-#include "resident_flat.h"
+#include "Resident_Flat.h"
 
 ResidentFlat::ResidentFlat (int id,
                             Resident::Color color, 
