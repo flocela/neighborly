@@ -1,4 +1,4 @@
-#include "happinessfuncfalling.h"
+#include "happinessfunc_falling.h"
 
 HappinessFuncFalling::HappinessFuncFalling (double happinessAtZeroPercentDiversity,
                                             double happinessAt100PercentDiversity): 

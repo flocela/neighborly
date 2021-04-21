@@ -2,6 +2,7 @@
 #include "../src/gridcitymap.h"
 
 #include <math.h>
+// g++ --std=c++17 -o runme ../src/gridcitymap.cpp gridcitymap_test.cpp test_main.o
 
 TEST_CASE("x-coordinate based on address", "[gridcitymap]")
 {
@@ -25,6 +26,16 @@ TEST_CASE("distance calculated", "[gridcitymap]")
     int a1_y  = city.get_y(a1);
     int a28_x = city.get_x(a28);
     int a28_y = city.get_y(a28);
+    double x_dist = fabs(a1_x - a28_x);
+    double y_dist = fabs(a1_y - a28_y);
+    REQUIRE( city.dist(a1, a28) == sqrt( (x_dist * x_dist) + (y_dist * y_dist) ) );
+}
 
-    REQUIRE( city.dist(a1, a28) == ( fabs(a1_x - a28_x) + fabs(a1_y - a28_y) ) );
+TEST_CASE("equals()", "[gridcitymap]")
+{
+    GridCityMap a = GridCityMap(6);
+    GridCityMap b = GridCityMap(6);
+    GridCityMap c = GridCityMap(7);
+    REQUIRE (a.equals(b));
+    REQUIRE (!a.equals(c));
 }
