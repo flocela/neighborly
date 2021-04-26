@@ -20,33 +20,32 @@ std::string UI_CMDLine::getAnswer (Question& question)
     return answer;
 }
 
-int UI_CMDLine::menu (std::vector<std::string> items) 
+int UI_CMDLine::menu (std::string prompt, std::vector<std::string> items) 
 {
     int size = items.size();
-    std::stringstream ss;
-    ss << "Choose a city type by typing the corresponding number.";
-    ss << std::endl;
+    std::stringstream ssPrompt;
+    ssPrompt << prompt << std::endl;
     for (int ii=0; ii<size; ++ii)
     {
-        ss << ii+1 << ")" << items[ii];
+        ssPrompt << ii+1 << ")" << items[ii];
     }
-    ss << std::endl;
+    ssPrompt << std::endl;
 
-    std::stringstream wrongTypess;
-    ss << "Please enter a whole number like 2." << std::endl;
-    wrongTypess << ss.str();
+    std::stringstream ssWrongType;
+    ssWrongType << "Please enter a whole number like 2." << std::endl;
+    ssWrongType << ssPrompt.str();
 
-    std::stringstream inRangess;
-    inRangess << "Please enter a number between 1 and ";
-    inRangess << items.size() << std::endl;
-    inRangess << ss.str();
+    std::stringstream ssInRange;
+    ssInRange << "Please enter a number between 1 and ";
+    ssInRange << items.size() << std::endl;
+    ssInRange << ssPrompt.str();
 
     Question_Int chooseMenuItem{1,
                                 1,
                                 size,
-                                ss.str(),
-                                wrongTypess.str(),
-                                inRangess.str()};
+                                ssPrompt.str(),
+                                ssWrongType.str(),
+                                ssInRange.str()};
     
     int tries = 0;
     std::string answer = "xx";
@@ -58,5 +57,8 @@ int UI_CMDLine::menu (std::vector<std::string> items)
         tries++;
         std::cout << "hasValidAswer: " << chooseMenuItem.hasValidAnswer() << std::endl;
     }
-    return stoi(answer);
+    if (tries >= 4)
+        throw "User would not choose a menu item properly.";
+    
+    return stoi(answer) - 1;
 }
