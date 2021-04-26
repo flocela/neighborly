@@ -18,10 +18,9 @@ int Manager::start ()
         namesOfCityFactories.push_back(factory->toString());
     }
 
-    //int cityChoice = ui.menu(namesOfCityFactories);
-    int cityChoice = 0;
-
-    std::unique_ptr<City> city = cityFactories[cityChoice]->createCity(ui);
+    int cityChoice = ui.menu(namesOfCityFactories);
+    std::cout << "Manager AA: " << cityChoice << std::endl;
+    std::unique_ptr<City> city = cityFactories[cityChoice - 1]->createCity(ui);
     std::cout << "Finished making city";
     std::cout << "City size: " << city->getAddresses().size();
     
