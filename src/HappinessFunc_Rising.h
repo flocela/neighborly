@@ -3,10 +3,10 @@
 
 #include "HappinessFunc.h"
 
-class HappinessFuncRising: public HappinessFunc
+class HappinessFunc_Rising: public HappinessFunc
 {
     public:
-        // HappinessFuncRising has an x-axis of Diversity and
+        // HappinessFunc_Rising has an x-axis of Diversity and
         // a y-axis of Happiness. Both axes range from 0.0 to 1.0.
         // @happinessAtZeroDiversity is the y-axis Happiness when
         // Diversity is 0.0.
@@ -16,14 +16,14 @@ class HappinessFuncRising: public HappinessFunc
         // hapinessAtOneDiversity is not in range.
         // Exception is thrown if happinessAtZeroDiversity is 
         // larger than happiness at OneDiversity.
-        HappinessFuncRising ( double happinessAtZeroDiversity,
+        HappinessFunc_Rising ( double happinessAtZeroDiversity,
                               double happinessAtOneDiversity);
-        HappinessFuncRising () = delete;
-        HappinessFuncRising (const HappinessFuncRising& obj) = default;
-        HappinessFuncRising (HappinessFuncRising&& obj) noexcept = default;
-        HappinessFuncRising& operator=(const HappinessFuncRising& obj) = default;
-        HappinessFuncRising& operator=(HappinessFuncRising&& obj) noexcept = default;
-        ~HappinessFuncRising() override = default;  
+        HappinessFunc_Rising () = delete;
+        HappinessFunc_Rising (const HappinessFunc_Rising& obj) = default;
+        HappinessFunc_Rising (HappinessFunc_Rising&& obj) noexcept = default;
+        HappinessFunc_Rising& operator=(const HappinessFunc_Rising& obj) = default;
+        HappinessFunc_Rising& operator=(HappinessFunc_Rising&& obj) noexcept = default;
+        ~HappinessFunc_Rising() override = default;  
 
         double getHappiness ( int tot_num_of_possible_neighbors, 
                               int num_of_like_neighbors, 

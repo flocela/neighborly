@@ -3,7 +3,7 @@
 
 #include "HappinessFunc.h"
 
-class HappinessFuncStepUp: public HappinessFunc
+class HappinessFunc_StepUp: public HappinessFunc
 {
     public:
         // This describes a step function. For example:
@@ -13,15 +13,15 @@ class HappinessFuncStepUp: public HappinessFunc
         // Then jumps at 0.75 diversity.
         // So it has a constant 0.9 happiness from diversity 0.75 
         // to 1.0.
-        HappinessFuncStepUp (double happinessValue);
-        HappinessFuncStepUp () = delete;
-        HappinessFuncStepUp (const HappinessFuncStepUp& obj) = default;
-        HappinessFuncStepUp (HappinessFuncStepUp&& obj) noexcept = default;
-        HappinessFuncStepUp& operator=(const HappinessFuncStepUp& obj) = default;
-        HappinessFuncStepUp& operator=(HappinessFuncStepUp&& obj) noexcept = default;
-        ~HappinessFuncStepUp() override = default;
+        HappinessFunc_StepUp (double happinessValue);
+        HappinessFunc_StepUp () = delete;
+        HappinessFunc_StepUp (const HappinessFunc_StepUp& obj) = default;
+        HappinessFunc_StepUp (HappinessFunc_StepUp&& obj) noexcept = default;
+        HappinessFunc_StepUp& operator=(const HappinessFunc_StepUp& obj) = default;
+        HappinessFunc_StepUp& operator=(HappinessFunc_StepUp&& obj) noexcept = default;
+        ~HappinessFunc_StepUp() override = default;
 
-        HappinessFuncStepUp (double happinessAtZeroDiversity, 
+        HappinessFunc_StepUp (double happinessAtZeroDiversity, 
                              double happinessAtOneDiversity, 
                              double diversityWhereRiseHappens);
         double getHappiness( int tot_num_of_possible_neighbors, 

@@ -1,6 +1,6 @@
 #include "HappinessFunc_StepDown.h"
 
-HappinessFuncStepDown::HappinessFuncStepDown (double happinessAtZeroDiversity, 
+HappinessFunc_StepDown::HappinessFunc_StepDown (double happinessAtZeroDiversity, 
                                               double happinessAtOneDiversity, 
                                               double stepDownHappensAt): 
     _happiness_at_zero_diversity{happinessAtZeroDiversity},
@@ -18,7 +18,7 @@ HappinessFuncStepDown::HappinessFuncStepDown (double happinessAtZeroDiversity,
     
 }
 
-double HappinessFuncStepDown::getHappiness ( 
+double HappinessFunc_StepDown::getHappiness ( 
     int tot_num_of_possible_neighbors, 
     int num_of_like_neighbors, 
     int num_of_diff_neighbors) const

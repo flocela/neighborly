@@ -9,5 +9,3 @@ Resident::Resident (int id,
     _allowed_movement_distance{allowedMovementDistance}, 
     _happiness_goal{happinessGoal}              
 {}
- 
-const std::vector<int> Resident::residentTypes = {flat, rising, falling, stepup, stepdown}

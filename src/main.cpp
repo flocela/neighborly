@@ -1,8 +1,10 @@
 #include <iostream>
-#include "gridcitymap.h"
+#include "Manager.h"
 
 int main() {
+    //vector<CityType> citytypes{GridCardFactory, RRTracksCardFactory}
     std::cout << "Hello World!" << "\n";
-    GridCityMap gridcitymap = GridCityMap(6);
+    Manager m{};
+    m.start();
     return 0;
 }

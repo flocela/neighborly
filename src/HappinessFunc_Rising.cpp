@@ -1,6 +1,6 @@
 #include "HappinessFunc_Rising.h"
 
-HappinessFuncRising::HappinessFuncRising (double happinessAtZeroDiversity,
+HappinessFunc_Rising::HappinessFunc_Rising (double happinessAtZeroDiversity,
                                           double happinessAtOneDiversity): 
     _happiness_at_zero_diversity{happinessAtZeroDiversity},
     _happiness_at_one_diversity{happinessAtOneDiversity}
@@ -14,7 +14,7 @@ HappinessFuncRising::HappinessFuncRising (double happinessAtZeroDiversity,
         throw "hapinessAtOneDiversity must be larger than at happinessAtZeroDiversity.";
 }
 
-double HappinessFuncRising::getHappiness ( 
+double HappinessFunc_Rising::getHappiness ( 
     int tot_num_of_possible_neighbors, 
     int num_of_like_neighbors, 
     int num_of_diff_neighbors) const

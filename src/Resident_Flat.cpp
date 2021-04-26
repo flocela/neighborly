@@ -1,6 +1,6 @@
 #include "Resident_Flat.h"
 
-ResidentFlat::ResidentFlat (int id,
+Resident_Flat::Resident_Flat (int id,
                             Resident::Color color, 
                             Resident::ResidentType residentType,
                             double allowedMovementDistance,
@@ -10,7 +10,7 @@ ResidentFlat::ResidentFlat (int id,
     _happiness_func{happinessValue}
 {}
 
-double ResidentFlat::getHappiness(std::vector<Resident::Color> neighbors) const
+double Resident_Flat::getHappiness(std::vector<Resident::Color> neighbors) const
 {
     int total = neighbors.size();
     int like  = 0;

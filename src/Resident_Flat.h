@@ -1,32 +1,29 @@
-#ifndef RESIDENTFLAT_H
-#define RESIDENTFLAT_H
+#ifndef Resident_Flat_H
+#define Resident_Flat_H
 
-#include <Resident.h>
+#include "Resident.h"
 #include "HappinessFunc_Flat.h"
 
-class ResidentFlat: public Resident
+class Resident_Flat: public Resident
 {
     public:
-        ResidentFlat () = delete;
-        ResidentFlat (int id,
+        Resident_Flat () = delete;
+        Resident_Flat (int id,
                       Color color, 
                       ResidentType residentType,
                       double allowedMovementDistance,
                       double happinessGoal,
                       double happinessValue);
-        ResidentFlat (const ResidentFlat& obj) = default;
-        ResidentFlat (ResidentFlat&& obj) noexcept = default;
-        ResidentFlat& operator= (const ResidentFlat& obj) = default;
-        ResidentFlat& operator= (ResidentFlat&& obj) noexcept = default;
-        ~ResidentFlat() = default;
+        Resident_Flat (const Resident_Flat& obj) = default;
+        Resident_Flat (Resident_Flat&& obj) noexcept = default;
+        Resident_Flat& operator= (const Resident_Flat& obj) = default;
+        Resident_Flat& operator= (Resident_Flat&& obj) noexcept = default;
+        ~Resident_Flat() = default;
+
         double getHappiness (std::vector<Color> neighbors) const override;
-        Resident::Color getColor () const override;
-        Resident::ResidentType getResidentType () const override;
-        double getAllowedMovementDistance () const override;
-        double getHappinessGoal () const override;
 
         private:
-        HappinessFuncFlat _happiness_func;
+        HappinessFunc_Flat _happiness_func;
 };
 
 #endif

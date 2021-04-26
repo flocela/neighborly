@@ -1,6 +1,6 @@
 #include "Resident_StepDown.h"
 
-ResidentStepDown::ResidentStepDown (int id,
+Resident_StepDown::Resident_StepDown (int id,
                                     Color color, 
                                     ResidentType residentType,
                                     double allowedMovementDistance,
@@ -16,7 +16,7 @@ ResidentStepDown::ResidentStepDown (int id,
     
 }
 
-double ResidentStepDown::getHappiness(std::vector<Resident::Color> neighbors) const
+double Resident_StepDown::getHappiness(std::vector<Resident::Color> neighbors) const
 {
     int total = neighbors.size();
     int like  = 0;

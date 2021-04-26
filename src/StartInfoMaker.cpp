@@ -19,10 +19,10 @@ StartInfo StartInfoMaker::getInfo (City::CityType cityType,
                                    double percentOptionallyMoveEnd
                                   )
 {
-    StartInfo info;
-    if ( cityType == CityMap::CityType::grid) {
+    StartInfo info{};
+    if ( cityType == City::CityType::grid) {
         int city_width = (int)cityValues[0];
-        info.city = std::make_unique<GridCityMap>(city_width);
+        info.city = std::make_unique<City_Grid>(city_width);
 
     }
 
@@ -45,20 +45,11 @@ StartInfo StartInfoMaker::getInfo (City::CityType cityType,
 	int group2Count                       = 28;
     
     int happinessGoal = 0.5;
-    int maxNumOfRuns  = 2;
-    double percentForcedToMoveStart   = 10.0;
-    double percentForcedToMoveEnd     = 10.0;
-    double percentOptionallyMoveStart = 10.0;
-    double percentOptionallyMoveEnd = 10.0;
 
-
-    StartInfo info = StartInfo();
-
-    std::unique_ptr<CityMap> city = std::make_unique<GridCityMap>(city_width);
-    std::vector<std::unique_ptr<Resident>> residents = {};
+    std::unique_ptr<City> city = std::make_unique<City_Grid>(city_width);
     for (int ii=0; ii<group1Count; ii++)
     {
-    	residents[ii] = std::make_unique<ResidentFlat>(ii,
+    	info.residents[ii] = std::make_unique<Resident_Flat>(ii,
 											           group1Color,
 											           group1Type,
 											           group1MovementAllowed,
@@ -68,7 +59,7 @@ StartInfo StartInfoMaker::getInfo (City::CityType cityType,
 
 	for (int ii=group1Count; ii<group1Count + group2Count; ii++)
     {
-    	residents[ii] = std::make_unique<ResidentStepDown>(ii,
+    	info.residents[ii] = std::make_unique<Resident_StepDown>(ii,
 											               group2Color,
 											               group2Type,
 											               group2MovementAllowed,
@@ -79,7 +70,6 @@ StartInfo StartInfoMaker::getInfo (City::CityType cityType,
     }
 
     info.city = std::move(city);
-    info.residents = residents;
     info.maxNumOfRuns = maxNumOfRuns;
     info.percentForcedToMoveStart   = percentForcedToMoveStart;
     info.percentForcedToMoveEnd     = percentForcedToMoveEnd;

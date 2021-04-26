@@ -16,17 +16,20 @@ class Resident{
         Resident (Resident&& obj) noexcept = default;
         Resident& operator= (const Resident& obj) = default;
         Resident& operator= (Resident&& obj) noexcept = default;
-        virtual ~Resident ();
+        virtual ~Resident () = default;
 
         int getID() { return _ID; }
+        virtual Color getColor () const { return _color; };
+        virtual ResidentType getResidentType () const { return _resident_type; };
+        virtual double getAllowedMovementDistance () const { return _allowed_movement_distance; };
+        virtual double getHappinessGoal () const { return _happiness_goal; };
+
         // neighbors vector includes all possible neighbors, so
         // if a neighbors house is empty, Color::absent should
         // be added to neighbors
         virtual double getHappiness (std::vector<Color> neighbors) const = 0;
-        virtual Color getColor () const = 0;
-        virtual ResidentType getResidentType ()const = 0;
-        virtual double getAllowedMovementDistance () const = 0;
-        virtual double getHappinessGoal () const = 0;
+        
+        
 
     private:
         Resident::Color _color;

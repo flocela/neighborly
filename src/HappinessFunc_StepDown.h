@@ -3,12 +3,12 @@
 
 #include "HappinessFunc.h"
 
-class HappinessFuncStepDown: public HappinessFunc
+class HappinessFunc_StepDown: public HappinessFunc
 {
     public:
         // HappinessFunc has an x-axis of Diversity and a y-axis of Happiness.
         // Both axes range from 0.0 to 1.0.
-        // HappinessFuncStepDown(.90, .50, .75) makes
+        // HappinessFunc_StepDown(.90, .50, .75) makes
         // a function that stays constant at 0.90 happiness from
         // diversity 0.0 to 0.7499.. 
         // Then drops at 0.75 diversity.
@@ -18,15 +18,15 @@ class HappinessFuncStepDown: public HappinessFunc
         // @happinessAtOneDiversity, or @stepDownHappensAt are not in range.
         // An exception is thrown in if @happinessValueAtZeroDiversity is less than
         // or equal to @happinessValueAtOneDiversity.
-        HappinessFuncStepDown (double happinessAtZeroDiversity, 
+        HappinessFunc_StepDown (double happinessAtZeroDiversity, 
                                double happinessAtOneDiversity, 
                                double stepDownHappensAt);
-        HappinessFuncStepDown () = delete;
-        HappinessFuncStepDown (const HappinessFuncStepDown& obj) = default;
-        HappinessFuncStepDown (HappinessFuncStepDown&& obj) noexcept = default;
-        HappinessFuncStepDown& operator=(const HappinessFuncStepDown& obj) = default;
-        HappinessFuncStepDown& operator=(HappinessFuncStepDown&& obj) noexcept = default;
-        ~HappinessFuncStepDown() override = default;                       
+        HappinessFunc_StepDown () = delete;
+        HappinessFunc_StepDown (const HappinessFunc_StepDown& obj) = default;
+        HappinessFunc_StepDown (HappinessFunc_StepDown&& obj) noexcept = default;
+        HappinessFunc_StepDown& operator=(const HappinessFunc_StepDown& obj) = default;
+        HappinessFunc_StepDown& operator=(HappinessFunc_StepDown&& obj) noexcept = default;
+        ~HappinessFunc_StepDown() override = default;                       
 
         double getHappiness( int tot_num_of_possible_neighbors, 
                              int num_of_like_neighbors, 

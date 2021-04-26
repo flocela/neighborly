@@ -1,14 +1,14 @@
-#ifndef RESIDENTSTEPUP_H
-#define RESIDENTSTEPUP_H
+#ifndef Resident_StepUp_H
+#define Resident_StepUp_H
 
-#include <Resident.h>
+#include "Resident.h"
 #include "HappinessFunc_StepUp.h"
 
-class ResidentStepUp: public Resident
+class Resident_StepUp: public Resident
 {
     public:
-        ResidentStepUp () = delete;
-        ResidentStepUp (int id,
+        Resident_StepUp () = delete;
+        Resident_StepUp (int id,
                         Color color, 
                         ResidentType residentType,
                         double allowedMovementDistance,
@@ -16,19 +16,16 @@ class ResidentStepUp: public Resident
                         double happinessValueAtZeroDiversity,
                         double happinessValueAtOneDiversity,
                         double diversityWhereRiseHappens);
-        ResidentStepUp (const ResidentStepUp& obj) = default;
-        ResidentStepUp (ResidentStepUp&& obj) noexcept = default;
-        ResidentStepUp& operator= (const ResidentStepUp& obj) = default;
-        ResidentStepUp& operator= (ResidentStepUp&& obj) noexcept = default;
-        ~ResidentStepUp() = default;
+        Resident_StepUp (const Resident_StepUp& obj) = default;
+        Resident_StepUp (Resident_StepUp&& obj) noexcept = default;
+        Resident_StepUp& operator= (const Resident_StepUp& obj) = default;
+        Resident_StepUp& operator= (Resident_StepUp&& obj) noexcept = default;
+        ~Resident_StepUp() = default;
+
         double getHappiness (std::vector<Color> neighbors) const override;
-        Resident::Color getColor () const override;
-        Resident::ResidentType getResidentType () const override;
-        double getAllowedMovementDistance () const override;
-        double getHappinessGoal () const override;
 
         private:
-        HappinessFuncStepUp _happiness_func;
+        HappinessFunc_StepUp _happiness_func;
 };
 
 #endif

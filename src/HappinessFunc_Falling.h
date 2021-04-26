@@ -3,17 +3,17 @@
 
 #include "HappinessFunc.h"
 
-class HappinessFuncFalling: public HappinessFunc
+class HappinessFunc_Falling: public HappinessFunc
 {
     public:
-        HappinessFuncFalling (double happinessAtZeroPercentDiversity,
+        HappinessFunc_Falling (double happinessAtZeroPercentDiversity,
                               double happinessAt100PercentDiversity);
-        HappinessFuncFalling () = delete;
-        HappinessFuncFalling (const HappinessFuncFalling& obj) = default;
-        HappinessFuncFalling (HappinessFuncFalling&& obj) noexcept = default;
-        HappinessFuncFalling& operator=(const HappinessFuncFalling& obj) = default;
-        HappinessFuncFalling& operator=(HappinessFuncFalling&& obj) noexcept = default;
-        ~HappinessFuncFalling() override = default;
+        HappinessFunc_Falling () = delete;
+        HappinessFunc_Falling (const HappinessFunc_Falling& obj) = default;
+        HappinessFunc_Falling (HappinessFunc_Falling&& obj) noexcept = default;
+        HappinessFunc_Falling& operator=(const HappinessFunc_Falling& obj) = default;
+        HappinessFunc_Falling& operator=(HappinessFunc_Falling&& obj) noexcept = default;
+        ~HappinessFunc_Falling() override = default;
         double getHappiness( int tot_num_of_possible_neighbors, 
                              int num_of_like_neighbors, 
                              int num_of_diff_neighbors) const override;
