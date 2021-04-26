@@ -27,23 +27,19 @@ bool Question_Int::tryAnswer (std::string ans)
     }
     catch(std::invalid_argument& e)
     {
-        std::cout << "invalid argument" << std::endl;
         _next_prompt = &_type_prompt;
         return false;
     }
     catch(...)
-    {
-        std::cout << "catch..." << std::endl;
-        _next_prompt = &_range_prompt;
+    {   std::cout <<"catch anything";
+        _next_prompt = &_invalid_prompt;
         return false;
     }
     if (intAnswer < _min || intAnswer > _max)
     {
-        std::cout << "out of range" << std::endl;
         _next_prompt = &_range_prompt;
         return false;
     }
-    std::cout << "valid answer" << std::endl;
     _valid_answer = true;
     _answer = intAnswer;
 }
@@ -55,5 +51,7 @@ bool Question_Int::hasValidAnswer ()
 
 std::string Question_Int::getAnswer ()
 {
+    if (hasValidAnswer() == false)
+        throw ("There is no answer yet.");
     return std::to_string(_answer);
 }
