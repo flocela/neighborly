@@ -1,4 +1,4 @@
-#include "catchutils/catch.hpp"
+#include "catch.hpp"
 #include "../src/Question_Int.h"
 
 using Catch::Matchers::Contains;

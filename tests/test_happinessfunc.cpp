@@ -1,4 +1,4 @@
-#include "catchutils/catch.hpp"
+#include "catch.hpp"
 #include "../src/HappinessFunc_Flat.h"
 #include "../src/HappinessFunc_Rising.h"
 #include "../src/HappinessFunc_StepDown.h"

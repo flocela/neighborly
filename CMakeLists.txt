@@ -10,7 +10,7 @@ project(HelloWorld)
 file(GLOB project_SRCS src/*.cpp src/simulator/*.cpp)
 add_executable(HelloWorld ${project_SRCS})
 
-file(GLOB test_SRCS tests/*.cpp tests/catchutils/*.cpp
+file(GLOB test_SRCS tests/*.cpp tests/*.cpp
 src/City_Grid.cpp
 src/CityFactory_Grid.cpp 
 src/HappinessFunc_Falling.cpp

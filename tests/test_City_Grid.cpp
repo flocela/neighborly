@@ -1,4 +1,4 @@
-#include "catchutils/catch.hpp"
+#include "catch.hpp"
 #include "../src/City_Grid.h"
 
 #include <math.h>
