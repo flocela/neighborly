@@ -1,5 +1,5 @@
-#include "CityFactory_Grid.h"
-#include "Question_Int.h"
+#include "simulator/CityFactory_Grid.h"
+#include "simulator/Question_Int.h"
 
 CityFactory_Grid::CityFactory_Grid ()
 {
