@@ -50,7 +50,6 @@ TEST_CASE("Require not in the correct range prompt is given when answer is not i
                    notInRangePrompt};
     q.tryAnswer("32");
     REQUIRE_THAT( q.getPrompt(), Contains(notInRangePrompt));
-    REQUIRE(true);
 }
 
 TEST_CASE("hasValidAnswer() is false if answer is not a number.")

@@ -12,7 +12,6 @@ TEST_CASE("HappinessFuncFlat Constructor throws invalid argument exception", "[h
 {   
     REQUIRE_THROWS_WITH(HappinessFunc_Flat(1.1), Contains("must be between 0.0 and 1.0 inclusive") );
     REQUIRE_THROWS_WITH(HappinessFunc_Flat(-0.2), Contains("must be between 0.0 and 1.0 inclusive"));
-    REQUIRE(false);
 }
 
 
