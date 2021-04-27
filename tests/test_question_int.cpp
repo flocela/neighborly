@@ -8,7 +8,7 @@ using Catch::Matchers::Contains;
 // Run from the command line:
 // g++ --std=c++17 -o runme ../src/Question_Int.cpp test_question_int.cpp test_main.o
 
-TEST_CASE("Original Prompt is given first.")
+TEST_CASE("getPrompt() returns the origPrompt first.")
 {   
     std::string origPrompt = "Choose a number between 1 and 10 inclusive";
     std::string notNumPrompt = "I need a whole number.";
@@ -22,7 +22,7 @@ TEST_CASE("Original Prompt is given first.")
     REQUIRE ( q.getPrompt() == origPrompt);
 }
 
-TEST_CASE("Not a number prompt is given when answer is not a number.")
+TEST_CASE("If answer is not a number, getPrompt returns inRangePrompt.")
 {   
     std::string origPrompt = "Choose a number between 1 and 10 inclusive";
     std::string notNumPrompt = "I need a whole number.";
@@ -37,7 +37,7 @@ TEST_CASE("Not a number prompt is given when answer is not a number.")
     REQUIRE_THAT( q.getPrompt(), Contains(notNumPrompt));
 }
 
-TEST_CASE("Require not in the correct range prompt is given when answer is not in range.")
+TEST_CASE("If answer is not in range, getPrompt() returns inRangePrompt.")
 {   
     std::string origPrompt = "Choose a number between 1 and 10 inclusive";
     std::string notNumPrompt = "I need a whole number.";
@@ -82,7 +82,7 @@ TEST_CASE("hasValidAnswer() is false, when answer is not in range.")
     REQUIRE( q.hasValidAnswer() == false);
 }
 
-TEST_CASE("hasValidAnswer() is true, when integer answer is given.")
+TEST_CASE("hasValidAnswer() is true, when an in range, integer answer is given.")
 {   
     std::string origPrompt = "Choose a number between 1 and 10 inclusive";
     std::string notNumPrompt = "I need a whole number.";
