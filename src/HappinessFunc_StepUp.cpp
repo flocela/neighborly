@@ -1,4 +1,4 @@
-#include "HappinessFunc_StepUp.h"
+#include "simulator/HappinessFunc_StepUp.h"
 
 HappinessFunc_StepUp::HappinessFunc_StepUp (double happinessAtZeroDiversity,
                                           double happinessAtOneDiversity,

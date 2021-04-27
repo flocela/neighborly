@@ -1,4 +1,4 @@
-#include "Resident.h"
+#include "simulator/Resident.h"
 
 Resident::Resident (int id,
                     Color color, 

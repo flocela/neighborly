@@ -1,4 +1,4 @@
-#include "Resident_Flat.h"
+#include "simulator/Resident_Flat.h"
 
 Resident_Flat::Resident_Flat (int id,
                             Resident::Color color, 

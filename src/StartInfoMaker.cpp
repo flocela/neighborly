@@ -1,7 +1,7 @@
-#include "StartInfoMaker.h"
-#include "Resident_Flat.h"
-#include "Resident_StepDown.h"
-#include "StartInfo.h"
+#include "simulator/StartInfoMaker.h"
+#include "simulator/Resident_Flat.h"
+#include "simulator/Resident_StepDown.h"
+#include "simulator/StartInfo.h"
 
 StartInfo StartInfoMaker::getInfo (City::CityType cityType,
                                    std::vector<double> cityValues,
