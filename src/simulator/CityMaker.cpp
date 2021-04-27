@@ -1,4 +1,4 @@
-#include "simulator/CityMaker.h"
+#include "CityMaker.h"
 
 std::unique_ptr<City> CityMaker::makeCity (UI& ui, CityFactory& cityFactory)
 {

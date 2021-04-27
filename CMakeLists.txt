@@ -11,9 +11,9 @@ file(GLOB project_SRCS src/*.cpp src/simulator/*.cpp)
 add_executable(HelloWorld ${project_SRCS})
 
 file(GLOB test_SRCS tests/*.cpp tests/catchutils/*.cpp src/simulator/*.cpp 
-src/City_Grid.cpp
-src/CityFactory_Grid.cpp 
-src/CityMaker.cpp
+#src/City_Grid.cpp
+#src/CityFactory_Grid.cpp 
+#src/CityMaker.cpp
 #HappinessFunc_Falling.cpp
 #HappinessFunc_Flat.cpp
 #HappinessFunc_Rising.cpp
