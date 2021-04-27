@@ -1,5 +1,5 @@
 #include "catchutils/catch.hpp"
-#include "../src/simulator/UI_CMDLine.h"
+#include "../src/UI_CMDLine.h"
 //#include "../src/Question_Int.h"
 #include <iostream>
 #include <sstream>

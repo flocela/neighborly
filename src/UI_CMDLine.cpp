@@ -1,8 +1,8 @@
-#include "simulator/UI_CMDLine.h"
+#include "UI_CMDLine.h"
 #include <iostream>
 #include <sstream>
 
-#include "simulator/Question_Int.h"
+#include "Question_Int.h"
 
 
 std::string UI_CMDLine::getAnswer (Question& question)

@@ -1,7 +1,7 @@
 #include "catchutils/catch.hpp"
-#include "../src/simulator/HappinessFunc_Flat.h"
-#include "../src/simulator/HappinessFunc_Rising.h"
-#include "../src/simulator/HappinessFunc_StepDown.h"
+#include "../src/HappinessFunc_Flat.h"
+#include "../src/HappinessFunc_Rising.h"
+#include "../src/HappinessFunc_StepDown.h"
 
 using Catch::Matchers::Contains;
 

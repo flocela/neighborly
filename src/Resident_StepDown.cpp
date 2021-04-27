@@ -1,4 +1,4 @@
-#include "simulator/Resident_StepDown.h"
+#include "Resident_StepDown.h"
 
 Resident_StepDown::Resident_StepDown (int id,
                                     Color color, 

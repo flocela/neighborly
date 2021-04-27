@@ -1,5 +1,5 @@
 #include "catchutils/catch.hpp"
-#include "../src/simulator/City_Grid.h"
+#include "../src/City_Grid.h"
 
 #include <math.h>
 // g++ --std=c++17 -o runme ../src/City_Grid.cpp test_City_Grid.cpp test_main.o

@@ -1,7 +1,7 @@
-#include "simulator/Manager.h"
-#include "simulator/CityFactory.h"
-#include "simulator/CityFactory_Grid.h"
-#include "simulator/UI_CMDLine.h"
+#include "Manager.h"
+#include "CityFactory.h"
+#include "CityFactory_Grid.h"
+#include "UI_CMDLine.h"
 #include <string>
 #include <memory>
 #include <iostream>

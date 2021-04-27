@@ -1,4 +1,4 @@
-#include "simulator/HappinessFunc_Flat.h"
+#include "HappinessFunc_Flat.h"
 
 HappinessFunc_Flat::HappinessFunc_Flat(double happinessValue): 
     _result{happinessValue}

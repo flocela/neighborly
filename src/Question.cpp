@@ -1,4 +1,4 @@
-#include "simulator/Question.h"
+#include "Question.h"
 
 int Question::getID ()
 {

@@ -1,4 +1,4 @@
-#include "simulator/HappinessFunc_Falling.h"
+#include "HappinessFunc_Falling.h"
 
 HappinessFunc_Falling::HappinessFunc_Falling (double happinessAtZeroPercentDiversity,
                                             double happinessAt100PercentDiversity): 

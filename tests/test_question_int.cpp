@@ -1,5 +1,5 @@
 #include "catchutils/catch.hpp"
-#include "../src/simulator/Question_Int.h"
+#include "../src/Question_Int.h"
 
 using Catch::Matchers::Contains;
 
