@@ -1,8 +1,8 @@
 #include "HappinessFunc_StepDown.h"
 
-HappinessFunc_StepDown::HappinessFunc_StepDown (double happinessAtZeroDiversity, 
-                                              double happinessAtOneDiversity, 
-                                              double stepDownHappensAt): 
+HappinessFunc_StepDown::HappinessFunc_StepDown ( double happinessAtZeroDiversity, 
+                                                 double happinessAtOneDiversity, 
+                                                 double stepDownHappensAt): 
     _happiness_at_zero_diversity{happinessAtZeroDiversity},
     _happiness_at_one_diversity{happinessAtOneDiversity},
     _where_drop_happens{stepDownHappensAt}
@@ -15,6 +15,8 @@ HappinessFunc_StepDown::HappinessFunc_StepDown (double happinessAtZeroDiversity,
              "must be between 0.0 and 1.0 inclusive.";
     if (happinessAtZeroDiversity <= happinessAtOneDiversity)
         throw "happinessAtZeroDiversity must be larger than happinessAtOneDiversity.";
+    if (stepDownHappensAt < 0 || stepDownHappensAt > 1.0)
+        throw "stepDownHappensAt must be between 0.0 and 1.0 inclusive.";
     
 }
 

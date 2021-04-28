@@ -1,13 +1,13 @@
 #include "Resident_StepDown.h"
 
-Resident_StepDown::Resident_StepDown (int id,
-                                    Color color, 
-                                    ResidentType residentType,
-                                    double allowedMovementDistance,
-                                    double happinessGoal,
-                                    double happinessValueAtZeroDiversity,
-                                    double happinessValueAtOneDiversity,
-                                    double diversityWhereDropHappens):
+Resident_StepDown::Resident_StepDown ( int id,
+                                       Color color, 
+                                       ResidentType residentType,
+                                       double allowedMovementDistance,
+                                       double happinessGoal,
+                                       double happinessValueAtZeroDiversity,
+                                       double happinessValueAtOneDiversity,
+                                       double diversityWhereDropHappens):
     Resident(id, color, residentType, allowedMovementDistance, happinessGoal),
     _happiness_func{happinessValueAtZeroDiversity, 
                     happinessValueAtOneDiversity, 
