@@ -2,9 +2,9 @@
 
 HappinessFunc_Flat::HappinessFunc_Flat(double happinessValue): 
     _result{happinessValue}
-{
+{   
     if (_result  < 0.0 || _result  > 1.0)
-       throw "happinessValue must be between 0.0 and 1.0 inclusive.";
+       throw "HappinessValue must be between 0.0 and 1.0 inclusive.";
 }
 
 double HappinessFunc_Flat::getHappiness ( 
