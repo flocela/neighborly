@@ -20,10 +20,9 @@ HappinessFunc_StepDown::HappinessFunc_StepDown ( double happinessAtZeroDiversity
     
 }
 
-double HappinessFunc_StepDown::getHappiness ( 
-    int tot_num_of_possible_neighbors, 
-    int num_of_like_neighbors, 
-    int num_of_diff_neighbors) const
+double HappinessFunc_StepDown::getHappiness ( int tot_num_of_possible_neighbors, 
+                                              int num_of_like_neighbors, 
+                                              int num_of_diff_neighbors) const
 {
     double diversity = num_of_diff_neighbors / (double)(num_of_diff_neighbors + num_of_like_neighbors);
     if (diversity < _where_drop_happens)
