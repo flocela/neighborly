@@ -17,6 +17,7 @@ class City_Grid: public City
         City_Grid& operator= (const City_Grid& o) = default;
         ~City_Grid() = default;
 
+        int getSize() const override;
         std::vector<int> getAddresses () const override;
         double dist (const int& from_address, const int& to_address) const override;
         int get_x (const int& address) const;

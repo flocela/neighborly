@@ -1,6 +1,5 @@
 #include "Question_Int.h"
 #include <stdexcept>
-#include <iostream>
 
 Question_Int::Question_Int (int id,
                             int min, 
@@ -31,7 +30,7 @@ bool Question_Int::tryAnswer (std::string ans)
         return false;
     }
     catch(...)
-    {   std::cout <<"catch anything";
+    { 
         _next_prompt = &_invalid_prompt;
         return false;
     }
@@ -42,6 +41,7 @@ bool Question_Int::tryAnswer (std::string ans)
     }
     _valid_answer = true;
     _answer = intAnswer;
+    return true;
 }
 
 bool Question_Int::hasValidAnswer ()

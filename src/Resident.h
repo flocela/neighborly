@@ -29,8 +29,6 @@ class Resident{
         // be added to neighbors
         virtual double getHappiness (std::vector<Color> neighbors) const = 0;
         
-        
-
     private:
         Resident::Color _color;
         Resident::ResidentType _resident_type;

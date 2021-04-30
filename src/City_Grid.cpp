@@ -23,6 +23,11 @@ City_Grid::City_Grid (int width): _width{width}, _addresses(width*width)
   	}
 }
 
+int City_Grid::getSize() const
+{
+	return _addresses.size();
+}
+
 std::vector<int> City_Grid::getAddresses () const
 {
 	return _addresses;
