@@ -20,6 +20,7 @@ src/HappinessFunc_StepDown.cpp
 src/HappinessFunc_StepUp.cpp
 src/Manager.cpp
 src/Question_Int.cpp
+src/Question_Double.cpp
 src/Question.cpp
 src/Resident_Flat.cpp
 src/Resident_StepDown.cpp
