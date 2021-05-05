@@ -2,7 +2,6 @@
 #define Question_YN_H
 
 #include "Question.h"
-#include <memory>
 
 class Question_YN: public Question
 {
@@ -10,13 +9,14 @@ class Question_YN: public Question
         Question_YN ( int id,
                       std::string origPrompt);
         
-        Question_YN () = delete;
+        Question_YN () = default;
         Question_YN ( const Question_YN& obj ) = default;
         Question_YN ( Question_YN&& obj) noexcept = default;
         Question_YN& operator= ( const Question_YN& obj) = default;
         Question_YN& operator= ( Question_YN&& obj) noexcept = default;
         ~Question_YN() = default;
 
+        int getID() override;
         std::string getPrompt () override;
         bool tryAnswer (std::string answer) override;
         bool hasValidAnswer () override;

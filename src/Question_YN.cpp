@@ -7,6 +7,11 @@ Question_YN::Question_YN ( int id,
     _next_prompt = &_orig_prompt;
 }
 
+int Question_YN::getID()
+{
+    return _ID;
+}
+
 std::string Question_YN::getPrompt ()
 {
     return *_next_prompt;
@@ -31,8 +36,7 @@ bool Question_YN::tryAnswer (std::string ans)
              ans == "Nope"  ||
              ans == "nope"  ||
              ans == "N"     ||
-             ans == "n"     ||
-             ans == "FALSE" ||)
+             ans == "n")
     {
         _valid_answer = true;
         _answer = "N";

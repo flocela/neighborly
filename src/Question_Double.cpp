@@ -14,6 +14,11 @@ Question_Double::Question_Double (int id,
     _valid_answer = false;
 }
 
+int Question_Double::getID()
+{
+    return _ID;
+}
+
 std::string Question_Double::getPrompt ()
 {
     return *_next_prompt;

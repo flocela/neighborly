@@ -15,7 +15,6 @@ std::string UI_CMDLine::getAnswer (Question& question)
         std::cin >> answer;
         question.tryAnswer(answer);
         tries++;
-        std::cout << "hasValidAswer: " << question.hasValidAnswer() << std::endl;
     }
     return answer;
 }
@@ -55,7 +54,6 @@ int UI_CMDLine::menu (std::string prompt, std::vector<std::string> items)
         std::cin >> answer;
         chooseMenuItem.tryAnswer(answer);
         tries++;
-        std::cout << "hasValidAswer: " << chooseMenuItem.hasValidAnswer() << std::endl;
     }
     if (tries >= 4)
         throw "User would not choose a menu item properly.";

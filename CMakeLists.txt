@@ -7,7 +7,7 @@ set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
 
 project(HelloWorld)
 
-file(GLOB project_SRCS src/*.cpp src/simulator/*.cpp)
+file(GLOB project_SRCS src/*.cpp)
 add_executable(HelloWorld ${project_SRCS})
 
 file(GLOB test_SRCS tests/*.cpp

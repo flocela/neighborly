@@ -1,5 +1,5 @@
 #include "City_Grid.h"
-
+#include <iostream>
 #include <math.h>
 
 // _width is the width of the grid.

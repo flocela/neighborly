@@ -12,13 +12,14 @@ class Question_Int: public Question
                       std::string origPrompt,
                       std::string wrongTypePrompt, 
                       std::string inRangePrompt);
-        Question_Int () = delete;
+        Question_Int () = default;
         Question_Int (const Question_Int& obj) = default;
         Question_Int (Question_Int&& obj) noexcept = default;
         Question_Int& operator=(const Question_Int& obj) = default;
         Question_Int& operator=(Question_Int&& obj) noexcept = default;
         ~Question_Int() = default;
 
+        int getID() override;
         std::string getPrompt () override;
         bool tryAnswer (std::string answer) override;
         bool hasValidAnswer () override;

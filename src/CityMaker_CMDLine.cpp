@@ -1,5 +1,6 @@
 #include "CityMaker_CMDLine.h"
 #include "UI_CMDLine.h"
+#include <iostream>
 
 std::unique_ptr<City> CityMaker_CMDLine::makeCity (std::vector<CityFactory*> cityFactories) const
 {
@@ -11,9 +12,7 @@ std::unique_ptr<City> CityMaker_CMDLine::makeCity (std::vector<CityFactory*> cit
     }
 
     int cityChoice = ui.menu("Choose a city type by typing the"
-                             " corresponding number.",
-                             namesOfCityFactories);
-    std::unique_ptr<City> city = cityFactories[cityChoice]->createCity(ui);
-    
-    
+                            " corresponding number.",
+                            namesOfCityFactories);
+    return cityFactories[cityChoice]->createCity(ui);
 }

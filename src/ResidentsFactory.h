@@ -9,6 +9,13 @@
 class ResidentsFactory
 {
     public:
+        ResidentsFactory () = default;
+        ResidentsFactory (const ResidentsFactory& obj) = default;
+        ResidentsFactory (ResidentsFactory&& obj) noexcept = default;
+        ResidentsFactory& operator= (const ResidentsFactory& obj) = default;
+        ResidentsFactory& operator= (ResidentsFactory&& obj) noexcept = default;
+        virtual ~ResidentsFactory() = default;
+
         virtual std::vector<std::unique_ptr<Resident>> createResidents(
                                                         UI& ui, 
                                                         int firstID,
@@ -21,8 +28,6 @@ class ResidentsFactory
                                                         double happinessGoal, 
                                                         Resident::Color color) = 0;
         virtual std::string toString () = 0;
-
-        virtual ~ResidentsFactory();
 };
 
 #endif

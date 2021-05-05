@@ -11,8 +11,8 @@ class ResidentsMaker
     public:
         virtual std::vector<std::unique_ptr<Resident>> 
             makeResidents (std::vector<ResidentsFactory*> residentsFactories,
-                           int maxNumOfResidents) const = 0;
-        virtual ~ResidentsMaker();
+                           int maxNumOfResidents) = 0; // TODO should these factories be const? Should this method me const?
+        virtual ~ResidentsMaker() = default;
 };
 
 #endif

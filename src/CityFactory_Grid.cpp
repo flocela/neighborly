@@ -30,7 +30,6 @@ std::unique_ptr<City> CityFactory_Grid::createCity (UI& ui)
         throw "Can not get information needed to make a city"
         " from the user.";
     }
-    
 }
 
 std::string CityFactory_Grid::toString ()

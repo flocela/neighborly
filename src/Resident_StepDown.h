@@ -22,7 +22,7 @@ class Resident_StepDown: public Resident
         Resident_StepDown& operator= (Resident_StepDown&& obj) noexcept = default;
         ~Resident_StepDown() = default;
 
-        double getHappiness (std::vector<Color> neighbors) const override;
+        double getHappiness (std::vector<Resident::Color> neighbors) const override;
 
         private:
         HappinessFunc_StepDown _happiness_func;

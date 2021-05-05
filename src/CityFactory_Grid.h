@@ -4,6 +4,7 @@
 #include "CityFactory.h"
 #include "City_Grid.h"
 #include <string>
+#include "Question.h"
 
 class CityFactory_Grid: public CityFactory
 {

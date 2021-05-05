@@ -8,13 +8,15 @@ class ResidentsMaker_CMDLine: public ResidentsMaker
 {
     public:
         ResidentsMaker_CMDLine ();
+        ~ResidentsMaker_CMDLine () = default;
         std::vector<std::unique_ptr<Resident>> 
-            makeResidents (std::vector<ResidentsFactory*> residentFactories, 
-                           int maxNumOfResidents) const override;
+            makeResidents (std::vector<ResidentsFactory*> residentsFactories,
+                           int maxNumOfResidents) override;
     private:
-        std::unique_ptr<Question_Int> _num_of_types_of_residents_q;
-        
-        
+        std::vector<std::string> getNames (std::vector<ResidentsFactory*> residentsFactories);
+        int getNumberOfTypesOfResidents(UI& ui);
+        Question_Int createQuestionHowManyResidentTypes();
+        std::unique_ptr<Resident> makeResidents(UI& ui, int maxNumOfResidents);
 
 };
 

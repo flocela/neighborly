@@ -12,20 +12,21 @@ class Question_Double: public Question
                          std::string origPrompt,
                          std::string wrongTypePrompt, 
                          std::string inRangePrompt);
-        Question_Double () = delete;
+        Question_Double () = default;
         Question_Double (const Question_Double& obj) = default;
         Question_Double (Question_Double&& obj) noexcept = default;
         Question_Double& operator=(const Question_Double& obj) = default;
         Question_Double& operator=(Question_Double&& obj) noexcept = default;
         ~Question_Double() = default;
 
+        int getID() override;
         std::string getPrompt () override;
         bool tryAnswer (std::string answer) override;
         bool hasValidAnswer () override;
         std::string getAnswer () override;
         
     private:
-        int    _ID;
+        int _ID;
         double _min;
         double _max;
         double _answer;

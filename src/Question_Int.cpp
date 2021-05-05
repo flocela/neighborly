@@ -14,6 +14,11 @@ Question_Int::Question_Int (int id,
     _valid_answer = false;
 }
 
+int Question_Int::getID()
+{
+    return _ID;
+}
+
 std::string Question_Int::getPrompt ()
 {
     return *_next_prompt;
@@ -41,11 +46,11 @@ bool Question_Int::tryAnswer (std::string ans)
     }
     _valid_answer = true;
     _answer = intAnswer;
-    return true;
+    return _valid_answer;
 }
 
 bool Question_Int::hasValidAnswer ()
-{
+{   
     return _valid_answer;
 }
 

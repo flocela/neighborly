@@ -22,7 +22,7 @@ double Resident_StepDown::getHappiness(std::vector<Resident::Color> neighbors) c
     int total = neighbors.size();
     int like  = 0;
     int diff  = 0;
-
+/*
     for (Resident::Color color : neighbors)
     {
         if (color == getColor())
@@ -34,5 +34,6 @@ double Resident_StepDown::getHappiness(std::vector<Resident::Color> neighbors) c
         
     }
 
-    return _happiness_func.getHappiness(total, like, diff);
+    return _happiness_func.getHappiness(total, like, diff);*/
+    return 2.0;
 }
