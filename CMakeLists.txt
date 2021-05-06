@@ -12,7 +12,8 @@ add_executable(HelloWorld ${project_SRCS})
 
 file(GLOB test_SRCS tests/*.cpp
 src/City_Grid.cpp
-src/CityFactory_Grid.cpp 
+src/CityFactory_Grid.cpp
+src/Coordinate.cpp
 src/HappinessFunc_Falling.cpp
 src/HappinessFunc_Flat.cpp
 src/HappinessFunc_Rising.cpp
